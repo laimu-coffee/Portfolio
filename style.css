@@ -1,0 +1,206 @@
+/* Variables & Reset */
+:root {
+    --bg: #050a05;
+    --text: #e0e0e0;
+    --accent: #00ff66;
+    --red: #ff3e3e;
+    --blue: #3e8bff;
+    --yellow: #ffcc00;
+    --border: rgba(255, 255, 255, 0.1);
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* UI Overlay */
+.overlay-scanline {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px; z-index: 1000; pointer-events: none; opacity: 0.3;
+}
+
+.ui-frame {
+    position: fixed; width: 100%; padding: 1rem 2rem;
+    display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 0.7rem;
+    z-index: 1001; opacity: 0.5; color: var(--accent);
+}
+
+/* Layout Elements */
+section {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; padding: 5rem 10%;
+    border-bottom: 1px solid var(--border); overflow: hidden;
+}
+
+.container { width: 100%; max-width: 1200px; margin: 0 auto; z-index: 10; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+
+.parallax-text {
+    position: absolute; font-family: var(--font-mono); font-weight: 800;
+    font-size: clamp(5rem, 15vw, 15rem); color: white; opacity: 0.03;
+    white-space: nowrap; z-index: 1; pointer-events: none; text-transform: uppercase;
+}
+
+/* Components */
+.section-label {
+    font-family: var(--font-mono); font-size: 1.2rem; letter-spacing: 0.3em;
+    margin-bottom: 3rem; color: var(--accent); border-left: 4px solid currentColor; padding-left: 1rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+    padding: 2rem; border-radius: 2px; transition: 0.4s; position: relative;
+}
+.card:hover { background: rgba(255, 255, 255, 0.07); transform: translateY(-5px); }
+
+/* Hero */
+#hero { text-align: center; background: radial-gradient(circle at center, #0a2a1a 0%, var(--bg) 80%); }
+.main-title { font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; line-height: 0.9; margin-bottom: 1.5rem; }
+.accent-text { color: var(--accent); text-shadow: 0 0 20px rgba(0, 255, 102, 0.4); }
+.hero-tagline { font-family: var(--font-mono); letter-spacing: 0.1em; opacity: 0.7; }
+
+/* Profile Card */
+.system-card { border: 1px solid var(--accent); background: rgba(0, 255, 102, 0.05); padding: 1.5rem; }
+.card-header { font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1rem; color: var(--accent); border-bottom: 1px solid var(--accent); }
+.data-list { list-style: none; font-family: var(--font-mono); }
+.data-list li { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.status-active { color: var(--accent); animation: pulse 2s infinite; }
+
+/* Project Rankings */
+.red-label { color: var(--red); }
+.project-card::before { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: var(--red); }
+.rank-tag { position: absolute; top: 1rem; right: 1rem; font-family: var(--font-mono); font-weight: 900; opacity: 0.2; font-size: 2rem; }
+.tag-cloud span { display: inline-block; padding: 2px 8px; background: rgba(255,255,255,0.1); font-size: 0.7rem; margin: 1rem 0.5rem 0 0; }
+
+/* PR Section */
+.blue-label { color: var(--blue); }
+.giant-letter { font-size: 15rem; font-weight: 900; opacity: 0.1; line-height: 1; }
+.system-box { border-left: 2px solid var(--blue); padding-left: 2rem; }
+.value-list { list-style: none; margin-top: 1.5rem; opacity: 0.8; }
+
+/* Skill Bars */
+.yellow-label { color: var(--yellow); }
+.skill-bar-wrapper { margin-bottom: 1.5rem; }
+.skill-info { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 0.5rem; }
+.skill-bar { height: 2px; background: rgba(255,255,255,0.1); }
+.fill { height: 100%; background: var(--yellow); box-shadow: 0 0 10px var(--yellow); }
+
+/* Contact */
+.mail-link { font-family: var(--font-mono); font-size: 2rem; color: var(--accent); text-decoration: none; display: block; margin: 2rem 0; }
+.btn-group { display: flex; gap: 1rem; justify-content: center; }
+.btn { padding: 1rem 2rem; font-family: var(--font-mono); font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+.btn-primary { background: var(--accent); color: black; }
+.btn-outline { background: transparent; border: 1px solid white; color: white; }
+.btn:hover { opacity: 0.8; letter-spacing: 0.1em; }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.bg-geometry { position: absolute; width: 40%; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; pointer-events: none; color: var(--accent); }
+
+/* AA */
+
+.glitch {
+  color: rgb(223, 191, 191);
+  position: relative;
+  font-size: 9vw;
+  animation: glitch 5s 5s infinite;
+}
+
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 magenta;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 lightgreen;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+.scanlines {
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+
+.subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: .8vw;
+  color: rgba(165, 141, 141, .4);
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  text-align: center;
+  position: absolute;
+  left: 17%;
+  animation: glitch-2 5s 5.02s infinite;
+}
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
