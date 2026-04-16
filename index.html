@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANAGEMENT PORTAL | LOGIC & GALAXY</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>xjijij</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="overlay-scanline"></div>
-    <div class="ui-frame">
-        <div class="ui-left">STATUS: STABLE</div>
-        <div class="ui-right">SESSION: L-G_0410_ACTIVE</div>
-    </div>
-
     <section id="hero">
         <div class="parallax-text" data-speed="-100">NAVIGATOR</div>
         <div class="container reveal">
@@ -25,14 +18,6 @@
             <p class="hero-tagline">ゲームコース</p>
             <div class="scroll-indicator">SCROLL_DOWN</div>
         </div>
-        <!--
-            <div class="bg-geometry">
-                <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.05" fill="none" opacity="0.2"/>
-                    <path d="M0,50 L100,50 M50,0 L50,100" stroke="currentColor" stroke-width="0.05" fill="none" opacity="0.2"/>
-                </svg>
-            </div>
-        -->
     </section>
 
     <section id="about">
@@ -64,103 +49,6 @@
         </div>
     </section>
 
-    <section id="projects">
-        <div class="parallax-text" data-speed="-120">EXTRACT</div>
-        <div class="container">
-            <h2 class="section-label red-label">02 // EXTRACTION LOG (PROJECTS)</h2>
-            <div class="project-grid">
-                <div class="card project-card reveal" data-rank="ALEPH">
-                    <div class="rank-tag">ALEPH</div>
-                    <span class="category">AI / LOGIC ENGINE</span>
-                    <h3>Project "Void Ark"</h3>
-                    <p>宇宙船内での高度なAI同士の対話・論理エンジンを担当。1,000以上のフラグを動的に管理。</p>
-                    <div class="tag-cloud">
-                        <span>C++</span><span>AI Engine</span>
-                    </div>
-                </div>
-                <div class="card project-card reveal" data-rank="WAW">
-                    <div class="rank-tag">WAW</div>
-                    <span class="category">NETWORK / ASYNC</span>
-                    <h3>Neural Linker</h3>
-                    <p>非同期通信を用いたマルチプレイヤー・パズル。ラグを極限まで排除した同期アルゴリズム。</p>
-                    <div class="tag-cloud">
-                        <span>C#</span><span>Network</span>
-                    </div>
-                </div>
-                <div class="card project-card reveal" data-rank="HE">
-                    <div class="rank-tag">HE</div>
-                    <span class="category">GRAPHICS / VFX</span>
-                    <h3>Shader Noir</h3>
-                    <p>独自のポストエフェクトによる、スタイリッシュな精神汚染レンダリングシステム。</p>
-                    <div class="tag-cloud">
-                        <span>HLSL</span><span>Unity</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pr">
-        <div class="container reveal">
-            <div class="pr-grid grid">
-                <div class="pr-visual">
-                    <div class="giant-letter">L</div>
-                </div>
-                <div class="pr-content">
-                    <h2 class="section-label blue-label">03 // CORE VALUE</h2>
-                    <h3 class="pr-catch">「最適化」という名の美学</h3>
-                    <div class="system-box">
-                        <p>1msの遅延も許さない。コードの美しさとは、単なる可読性ではなく、実行効率に裏打ちされた合理性であると考えます。</p>
-                        <ul class="value-list">
-                            <li>・異常（Bug）を仕様に収容する設計</li>
-                            <li>・デザインを論理へ翻訳する高い解析力</li>
-                            <li>・チームを支える保守性の高いアーキテクチャ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="parallax-text" data-speed="150">OBSERVE</div>
-        <div class="container">
-            <h2 class="section-label yellow-label">04 // OBSERVATION LOG (SKILLS)</h2>
-            <div class="skills-layout grid">
-                <div class="reveal card">
-                    <h4>PROGRAMMING</h4>
-                    <div class="skill-bar-wrapper">
-                        <div class="skill-info"><span>C++ / C# / Rust</span><span>95%</span></div>
-                        <div class="skill-bar"><div class="fill" style="width: 45%"></div></div>
-                    </div>
-                    <div class="skill-bar-wrapper">
-                        <div class="skill-info"><span>HLSL / GLSL</span><span>88%</span></div>
-                        <div class="skill-bar"><div class="fill" style="width: 88%"></div></div>
-                    </div>
-                </div>
-                <div class="reveal card">
-                    <h4>ENVIRONMENTS</h4>
-                    <p class="tag-list">Unity, Unreal Engine 5, Custom Engines, Jenkins, Git, Docker, Mathematics</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container reveal text-center">
-            <h2 class="logout-title">LET'S BUILD A NEW WORLD</h2>
-            <p class="logout-sub">共同作業の依頼やコンタクトは、いつでもお待ちしています。</p>
-            <div class="contact-box">
-                <a href="mailto:contact@yourdomain.com" class="mail-link">contact@yourdomain.com</a>
-                <div class="btn-group">
-                    <button class="btn btn-primary">CONTINUE SESSION</button>
-                    <button class="btn btn-outline" onclick="location.reload()">LOGOUT</button>
-                </div>
-            </div>
-            <p class="copyright">© 2026 YOUR NAME PORTFOLIO. L-G_SYSTEM v4.0</p>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>
