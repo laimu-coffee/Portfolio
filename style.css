@@ -33,7 +33,7 @@ li {
 
 .container {
     padding: 80px 10%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -42,9 +42,13 @@ h2 {
     text-align: center;
     margin-bottom: 40px;
     border-bottom: 2px solid #333;
+
+    
     display: inline-block;
     position: relative;
     left: 50%;
+    width: 100%;
+
     transform: translateX(-50%);
     font-family: yuru-gothic;
 }
@@ -87,7 +91,11 @@ nav ul li {
 /* ヒーローセクション */
 .hero {
     height: 100vh;
-    background: #f4f4f4;
+    
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .5)), url('https://user0514.cdnw.net/shared/img/thumb/chp-PAKE4079_TP_V.jpg');
+
+    color: #fff;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
