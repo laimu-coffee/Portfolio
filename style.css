@@ -107,17 +107,6 @@ nav ul li {
     gap: 30px;
 }
 
-.card {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
 .work-img {
     background: #eee;
     height: 200px;
