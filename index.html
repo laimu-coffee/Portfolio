@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">PORTFOLIO</div>
+            <div class="logo"><a href="index.html">PORTFOLIO</a></div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#works">Works</a></li>
@@ -21,15 +21,23 @@
 
     <main>
         <section class="hero">
-            <h1>Hello World</h1>
-            <p>Web Designer / Front-end Developer</p>
+            <img src="https://user0514.cdnw.net/shared/img/thumb/susipaku_20240427003545_0033_D_TP_V.jpg">
+            <div class="text">
+                <h1>Hello World</h1>
+                <p>Web Designer / Front-end Developer</p>
+            </div>
+            
         </section>
 
         <section id="about" class="container">
             <h2>About Me</h2>
             <div class="about-flex">
                 <div class="about-text">
-                    <p>ここに自己紹介文を入力します。あなたの経歴や、大切にしている制作ポリシーなどを書いてみましょう。</p>
+                    <p>
+                        中学生の頃にプログラミングを初めて Scratchなどの視覚的にプログラミングができる言語を用いてプログラミングの仕組みやルールを知りました。<br>
+                        学習を続けていくうちに、テキスト言語のプログラムに興味を持ち、現在はUnityのゲームエンジンに使用されるC#をメインとしたプログラミングにチャレンジしています。<br>
+                        このサイトのメインは私自身が制作したゲームの一部を紹介します。
+                    </p>
                 </div>
             </div>
         </section>
@@ -38,19 +46,31 @@
             <h2>Works</h2>
             <div class="grid">
                 <div class="card">
-                    <div class="work-img">Sample Image</div>
-                    <h3>Project Title 01</h3>
-                    <p>使用技術：HTML / CSS / JavaScript</p>
+                    <a class="CardHolder" href="Game.html">
+                        <img class="CardButton" src="https://user0514.cdnw.net/shared/img/thumb/CGAGFVL1136_TP_V.jpg">
+                        <div class="overlay-text">Look Web</div>
+                    </a>
+                    <h3>Game</h3>
+                    <p>Unityで制作したゲーム</p>
+                    
                 </div>
                 <div class="card">
-                    <div class="work-img">Sample Image</div>
-                    <h3>Project Title 02</h3>
-                    <p>使用技術：WordPress</p>
+                    <a class="CardHolder" href="Tool.html">
+                        <img class="CardButton" src="https://user0514.cdnw.net/shared/img/thumb/CGAGFVL1136_TP_V.jpg">
+                        <div class="overlay-text">Look Web</div>
+                        
+                    </a>
+                    
+                    <h3>Tool</h3>
+                    <p>Unityの開発で自作したツール 著作権の管理を容易にしチームの全体が把握できるようなツール</p>
                 </div>
                 <div class="card">
-                    <div class="work-img">Sample Image</div>
-                    <h3>Project Title 03</h3>
-                    <p>使用技術：React / Firebase</p>
+                    <a class="CardHolder" href="Game.html">
+                        <img class="CardButton" src="https://user0514.cdnw.net/shared/img/thumb/CGAGFVL1136_TP_V.jpg">
+                        <div class="overlay-text">Look Web</div>
+                    </a>
+                    <h3>Illustration</h3>
+                    <p>未設置s</p>
                 </div>
             </div>
         </section>
@@ -58,17 +78,15 @@
         <section id="skills" class="container">
             <h2>Skills</h2>
             <div class="skills-list">
-                <span>HTML5</span>
-                <span>CSS3 (Sass)</span>
-                <span>JavaScript</span>
-                <span>Illustrator</span>
-                <span>Photoshop</span>
+                <span>Web-HTML・CSS</span>
+                <span>Unity-C#</span>
+                <span>Python</span>
             </div>
         </section>
 
         <section id="contact" class="container">
             <h2>Contact</h2>
-            <p>お仕事の依頼はこちらまで：example@mail.com</p>
+            <p>mail - hrs2521455@stu.o-hara.ac.jp</p>
         </section>
     </main>
 

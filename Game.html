@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <div class="logo"><a href="index.html">Game</a></div>
+            <ul>
+                <li><a href="#pistols">この一発に照準を</a></li>
+                <li><a href="#penguin">ペンギンの氷よけよけ</a></li>
+            </ul>
+        </nav>
+
+    </header>
+        <section class="hero">
+            <h1>GameProject</h1>
+            <p>Game Developer</p>
+        </section>
+
+
+        <section id="pistols" class="container">
+            <h2>この一発の照準を</h2>
+            <div class="about-flex">
+               <div class="card">
+                    <a class="CardHolder">
+                        <img class="CardButton" src="image/Game/imageTitle.png">
+                        <div class="overlay-text">Title画面</div>
+                    </a>
+
+                        <h3>使用言語/C#</h3>
+                        <p>unityで初めて本格に制作したゲーム</p>
+                        
+                </div>
+                <div class="card">
+                    <a class="CardHolder">
+                        <img class="CardButton" src="image/Game/imageGamming.png">
+                        <div class="overlay-text">ゲーム実行中の画面</div>
+                    </a>
+
+                        <h3>内容</h3>
+                        <p>
+                            ゲーム内に登場するヤクザさんを銃で倒すゲーム 工夫した点は実際に動くまで作って、スタートからゲーム終了時に結果を表示させて1ゲームのループを取り入れることができた。<br>
+                            ゲーム中に実装したスクリプトには保守性やコードの見易さを想定せず。アップデート時のメンテナンス性を考慮していなかった為 実装予定だったランキング機能を導入時エラーが発生し 他クラスから勝手に変更されていたりなどの不具合が多発した。<br>
+                            そのため今後は見やすく、機能追加するとき依存関係や命名規則等を重視したものにしたい
+                        </p>
+                        
+                </div>
+            </div>
+        </section>
+
+        <section id="penguin" class="container">
+            <h2>ペンギンの氷よけよけ</h2>
+            <div class="about-flex">
+               <div class="card">
+                
+                    <a class="CardHolder">
+                        <img class="CardButton" src="image/Game/imagePenguinTitle.png">
+                        <div class="overlay-text">Title画面</div>
+                    </a>
+
+                        <h3>使用言語/C#</h3>
+                        <p>一週間で作り上げた簡易的ゲーム</p>
+                        
+                </div>
+                <div class="card">
+
+                    <a class="CardHolder">
+                        <img class="CardButton" src="image/Game/imagePenguinGameA.png">
+
+                        <div class="overlay-text">ゲーム実行画面</div>
+                    </a>
+                    <h3>工夫した点</h3>
+                    <p>
+                        四方から氷が飛んで来るのをツルツル滑る氷の上で逃げ続けるゲーム 工夫した点が短期間で素早く必要なメソッドを実装した点にあります。<br>
+                        時間をかけるのではなく 簡易的にゲームの大幅な仕組み作りを完成させて。実装できた。<br>
+                        簡単な内容ではあるが自分自身が想像したゲームを作ることができた。今後リメイクする場合、点数を上げることの出来るアイテム等を出現させ、動き回るメリットをプレイヤーに提供できるようにしたいと考えている。
+                    </p>
+                    
+                </div>
+                <div class="card">
+
+                    <a class="CardHolder">
+                        <img class="CardButton" src="image/Game/imagePenguinGameB.png">
+                        <div class="overlay-text">ゲーム中盤の難易度</div>
+                    </a>
+                        <h3>内容</h3>
+                        <p>
+                            氷に落とされないように逃げ回り、生存時間に応じて難易度が徐々に上昇していく仕組みになっており、氷にあたってしまっても吹き飛ばされる事はないが<br>
+                            数が増えていくうちにどんどん海側に押されていき、海に転落してしまったらゲームオーバーになる。
+                        </p>
+                        
+                </div>
+            </div>
+        </section>
+</body>
+</html>
