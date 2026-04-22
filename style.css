@@ -487,10 +487,9 @@ footer {
   color: #4a4a4a;
 }
 
-/* レスポンシブ */
 @media (max-width: 768px) {
   .feature-card {
-    width: 100%; /* スマホでは1列 */
+    width: 100%; 
   }
 }
 
@@ -555,5 +554,12 @@ footer {
   }
   to {
     text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+@media (max-width: 768px) {
+  .Notfound 
+  {
+    width: 50%;
   }
 }
