@@ -15,9 +15,9 @@
             <nav>
                 <div class="inner">
                 <ul>
-                    <li><a href="#">Text</a></li>
-                    <li><a href="#">Text</a></li>
-                    <li><a href="#">Text</a></li>
+                    <li><a href="#Summary">CopyrightManager</a></li>
+                    <li><a href="#Entry">登録手順</a></li>
+                    <li><a href="#viewer">閲覧手順</a></li>
                 </ul>
                 </div>
             </nav>
@@ -57,12 +57,13 @@
         </ul>
     </div>
         <p>
-            その中でも「著作権や著作者への理解・ツールに入力の過程で今一度,使用している著作物に対して理解を深める目的。」は本ツールへの入力時の手間を作ることにより。プロジェクト上で扱うことになる他人の資産を「ただの、画像・音声・フォント」にとどまることなく、一つ一つ想いを込めて作られた作品に対する扱い方を再認識してほしい。そんな思いで設計しました。
+            その中でも「著作権や著作者への理解・ツールに入力の過程で今一度,使用している著作物に対して理解を深める目的。」は本ツールへの入力時の手間を作ることにより。プロジェクト上で扱うことになる他人の資産を「ただの、画像・音声・フォント」にとどまることなく、一つ一つ想いを込めて作られた作品に対する扱い方を再認識してほしい。そんな思いで設計しました。<br>
+            サイドカーファイル形式で保存しているため、ファイル移動やGitのコンフリクト解消を考慮しているため安全にプロジェクトを進めていくことが可能になります。
 
         </p>
     </section>
 
-    <section id="Summary" class="container">
+    <section id="Entry" class="container">
         <h2>登録手順(Editor)</h2>
        
         <div class="flow-container">
@@ -97,20 +98,148 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="Editor" class="container">
 
         <div class="card">
             <a class="CardHolder">
                 <img class="CardButton" src="image/Tool/EditorWindow.png">
-                <div class="overlay-text">Title画面</div>
+                <div class="overlay-text">編集用画面</div>
             </a>
+        </div>
+        
+            <div class="feature-container">
+                <div class="feature-card">
+                    <div class="main-title">●Identity</div>
+                    <div class="sub-title">基本的な情報を入力するセクションです。</div>
+                    <div class="description">
+                    -データの名前 	Unityで管理する名前<br>
+                    -作品名		作者が明言あるいはダウンロード時点のファイル名<br>
+                    -著作者		作品の著作権を保有する人物<br>
+                    -コピーライト登録者	この作品を登録する人物<br>
+                    -Format		作品の種類（画像・音声・フォント等）<br>
+                    </div>
+                </div>
 
-            <h3>使用言語/C#</h3>
-            <p>unityで初めて本格に制作したゲーム</p>
-                    
+                <div class="feature-card">
+                    <div class="main-title">●Right & License</div>
+                    <div class="sub-title">ルールやクレジット表記のセクションです。</div>
+                    <div class="description">
+                        -License Type		Licenseの種類<br>
+                        -指定クレジット表記	著作者が指定するクレジット表記を記入<br>
+                        -利用規約		著作物を使用する上でのルールを記入<br>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="main-title">●Sauce & Path</div>
+                    <div class="sub-title">データ関係のセクションです。</div>
+                    <div class="description">
+                        -Local Path		Unityのプロジェクトデータ内の相対パス<br>
+                        -Download Path	この著作物をダウンロードしたURL<br>
+                </div>
+            </div>
+    </section>
+
+    <section id="viewer" class="container">
+        <h2>閲覧手順(Editor)</h2>
+       
+        <div class="flow-container">
+            <div class="flow-item">
+                <div class="flow-node">1</div>
+                <div class="flow-text">
+                <h3>登録終了</h3>
+                <p>アセットの登録が完了した</p>
+                </div>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-node">2</div>
+                <div class="flow-text">
+                <h3>viewerを開く</h3>
+                <p>ツールバーから切り替える</p>
+                </div>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-node">3</div>
+                <div class="flow-text">
+                <h3>アセットライブラリ</h3>
+                <p>表示させたい資産を選択する</p>
+                </div>
+            </div>
+
+            <div class="flow-item">
+                <div class="flow-node">4</div>
+                <div class="flow-text">
+                <h3>インスペクター</h3>
+                <p>設定したライセンスを確認する</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="viewer" class="container">
+        <div class="card">
+            <a class="CardHolder">
+                <img class="CardButton" src="image/Tool/Title.png">
+                <div class="overlay-text">閲覧用画面</div>
+            </a>
         </div>
 
+        <div class="feature-container">
+                <div class="feature-card">
+                    <div class="main-title">●検索フィールド</div>
+                    <div class="sub-title">ファイルを探すときに使います。</div>
+                    <div class="description">
+                    -Aa 		クリック時検索時英語の大文字と小文字を区別します。<br>
+                    -AllAsset	リストに表示するフォーマットを制限します。<br>
+                    -ALL		検索時オリジナル名・作品名・作者名のいずれかで検索出来ます。<br>
+                    -Refresh	負荷を軽減するため押下時のみファイルの内容が更新されます。<br>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="main-title">●Asset Library</div>
+                    <div class="sub-title">登録済みのファイルの確認のフィールドです。</div>
+                    <div class="description">Assetで登録されたコピーライトの一覧をクリックで選ぶこと出来る
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="main-title">●INSPECTOR / DETAILS</div>
+                    <div class="sub-title">データ関係のセクションです。</div>
+                    <div class="description">
+                        inspectorで選択中の最新の編集が表示される<br>
+	                    UpdateListで編集時間から過去の変更履歴を閲覧できる
+
+                </div>
+            </div>
+
+            <h2>その他</h2>
+            <div class="grid">
+                <div class="card">
+                    <a  class="CardHolder" href="image/Tool/View_A.png">
+                        <img class="CardButton" src="image/Tool/View_A.png">
+                        <div class="overlay-text">拡大する</div>
+                    </a>
+                    <p>このようなデータで更新を行う場合前回の入力情報も同時に保存される</p>
+
+                </div>
+
+
+                <div class="card">
+                <a class="CardHolder" href="image/Tool/View_B.png">
+                    <img class="CardButton" src="image/Tool/View_B.png">
+                    <div class="overlay-text">拡大する</div>
+                </a>
+                    <p>保存された情報をリスト形式で細かく確認することができる</p>
+
+            </div>
+        </div>
+
+            
     </section>
-        
 </body>
     <script src="Script.js"></script>
 </html>

@@ -444,3 +444,116 @@ footer {
     padding-top: 0;
   }
 }
+
+.feature-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.feature-container .feature-card {
+  outline: auto;
+
+  border-radius: 4px;
+  padding: 24px;
+  width: 320px;
+}
+
+.feature-container .main-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+}
+
+.feature-container .sub-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #379197; 
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.feature-container .description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%; /* スマホでは1列 */
+  }
+}
+
+/* 全体のレイアウト設定 */
+.Notfound {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Notfound .container {
+  text-align: center;
+}
+
+.Notfound .error-code {
+  font-size: 10rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -5px;
+  position: relative;
+  font-family: 'yuru-gothic';
+  
+  animation: textflicker 2s infinite linear alternate-reverse;
+}
+
+/* テキスト部分 */
+.Notfound .error-text {
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+  margin-bottom: 2rem;
+  font-family: 'yuru-gothic';
+
+  color: #000000;
+  opacity: 0.8;
+}
+
+.back-home {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.Notfound .back-home:hover {  
+  transition: 0.3s;
+  scale: 1.05;
+}
+
+/* グリッチエフェクトの動き */
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
