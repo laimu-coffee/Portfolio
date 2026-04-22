@@ -560,6 +560,6 @@ footer {
 @media (max-width: 768px) {
   .Notfound 
   {
-    width: 50%;
+    width: 100%;
   }
 }
