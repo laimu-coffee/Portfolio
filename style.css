@@ -208,16 +208,7 @@ nav .inner ul li a:hover {
   z-index: 2;
   cursor: pointer;
 }
-/*pc用*/
-/*
-nav ul {
-    display: flex;
-}
 
-nav ul li {
-    margin-left: 20px;
-}
-*/
 
 /* ヒーローセクション */
 .hero {
@@ -563,3 +554,5 @@ footer {
     width: 100%;
   }
 }
+
+
